@@ -1,15 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { GameDataService } from '../services/game-data.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(gameData: GameDataService) { }
 
   ngOnInit() {
+  }
+
+  signIn(){
+
   }
 
 }

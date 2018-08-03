@@ -1,0 +1,19 @@
+.loginPage {
+  display: flex;
+  justify-content: center;
+}
+
+.loginPage .loginBox {
+  margin-top: 200px;
+  text-align: center;
+  padding: 50px;
+  background-color: lightgray;
+}
+
+.loginPage .loginBox .username {
+  margin: 10px;
+}
+
+.loginPage .loginBox .password {
+  margin: 10px;
+}

@@ -1,0 +1,29 @@
+.setupPage {
+  display: flex;
+  justify-content: center;
+}
+
+.setupPage .setupBox {
+  margin-top: 200px;
+  padding: 50px;
+  background-color: lightgray;
+}
+
+.setupPage .setupBox .setupBoxTop {
+  display: flex;
+}
+
+.setupPage .setupBox .setupBoxBottom {
+  margin: 0 auto;
+}
+
+.setupPage .setupBox .setupBoxBottom .createCard {
+  margin-left: 60px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.setupPage .setupBox .setupBoxBottom .playerList {
+  height: 100%;
+  text-align: center;
+}

@@ -1,3 +1,16 @@
-<p>
-  setup works!
-</p>
+<div class="setupPage">
+  <div class="setupBox">
+    <div class="setupBoxTop">
+      <input class="playerInput" [(ngModel)]="playerEntered">
+      <button class="addPlayer" (click)="addPlayer()">Add Player</button>
+    </div>
+    <div class="setupBoxBottom">
+      <button class="createCard" routerLink="/card">Create Card</button>
+      <div class="playerList" *ngFor="let player of playerList">
+        <div class="playerListItem" id={{player.name}}>
+          {{player.name}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
