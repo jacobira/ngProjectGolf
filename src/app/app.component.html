@@ -1,1 +1,15 @@
-<router-outlet></router-outlet>
+
+<div *ngIf="afAuth.user | async as user; else showLogin">
+  <router-outlet></router-outlet>
+  <button class="signOut" (click)="logout()">Sign Out</button>
+</div>
+
+<ng-template #showLogin>
+  <div class="loginPage">
+    <div class="loginBox">
+      <button class="signIn" (click)="login()" routerLink="/setup">
+        Sign In with Google
+      </button>
+    </div>
+  </div>
+</ng-template>

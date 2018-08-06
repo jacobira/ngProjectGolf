@@ -45,6 +45,6 @@ export class SetupComponent implements OnInit {
     this.playerList = this.gameData.players;
 
     console.log(`Player name ${this.playerEntered} added to the player list.`);
-    console.log(this.playerList);
+    // console.log(this.playerList);
   }
 }
