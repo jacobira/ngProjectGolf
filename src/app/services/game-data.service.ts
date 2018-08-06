@@ -8,7 +8,7 @@ export class GameDataService {
 
   constructor() { }
 
-  players: object[] = [];
+  players: any[] = [];
 
 
 }

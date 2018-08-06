@@ -5,10 +5,15 @@
       <button class="addPlayer" (click)="addPlayer()">Add Player</button>
     </div>
     <div class="setupBoxBottom">
-      <button class="createCard" routerLink="/card">Create Card</button>
-      <div class="playerList" *ngFor="let player of playerList">
+      <button class="createCard hidden" id="createCardBtn" routerLink="/card">Create Card</button>
+      <div class="playerList" id="playerList" *ngFor="let player of playerList">
         <div class="playerListItem" id={{player.name}}>
-          {{player.name}}
+          <div class="trashBtn" id="trashIcon" (click)="removePlayer(player.name)">
+            0
+          </div>
+          <div class="name">
+            {{player.name}}
+          </div>
         </div>
       </div>
     </div>
