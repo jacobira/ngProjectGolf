@@ -25,7 +25,18 @@
 
 .setupPage .setupBox .setupBoxBottom .playerList {
   height: 100%;
-  text-align: center;
+  width: 200px;
+}
+
+.setupPage .setupBox .setupBoxBottom .playerList .playerListItem {
+  display: flex;
+  height: 20px;
+  align-items: center;
+}
+
+.setupPage .setupBox .setupBoxBottom .playerList .playerListItem .trashBtn{
+  height: 20px;
+  margin-right: 20px;
 }
 
 .hidden {

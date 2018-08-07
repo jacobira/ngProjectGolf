@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 <div class="setupPage">
   <div class="setupBox">
     <div class="setupBoxTop">
@@ -8,9 +9,7 @@
       <button class="createCard hidden" id="createCardBtn" routerLink="/card">Create Card</button>
       <div class="playerList" id="playerList" *ngFor="let player of playerList">
         <div class="playerListItem" id={{player.name}}>
-          <div class="trashBtn" id="trashIcon" (click)="removePlayer(player.name)">
-            0
-          </div>
+          <div class="trashBtn fas fa-trash-alt" id="trashIcon" (click)="removePlayer(player.name)"></div>
           <div class="name">
             {{player.name}}
           </div>
@@ -19,3 +18,4 @@
     </div>
   </div>
 </div>
+
