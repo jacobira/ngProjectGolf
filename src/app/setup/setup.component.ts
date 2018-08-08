@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GameDataService } from '../services/game-data.service';
+import { NameFilterPipe } from '../pipes/name-filter.pipe';
 
 @Component({
   selector: 'app-setup',
@@ -8,7 +9,7 @@ import { GameDataService } from '../services/game-data.service';
 })
 export class SetupComponent implements OnInit {
 
-  constructor(private gameData: GameDataService) { }
+  constructor(private gameData: GameDataService, private nameFilter: NameFilterPipe) { }
 
   ngOnInit() {
   }
@@ -17,9 +18,11 @@ export class SetupComponent implements OnInit {
   playerList: any[] = this.gameData.players;
 
   addPlayer() {
+
     this.gameData.players.push(
-      { name: this.playerEntered,
-        scores: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+      {
+        name: this.nameFilter.transform(this.playerEntered),
+        scores: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         inScore: 0,
         outScore: 0,
         total: 0
@@ -28,10 +31,10 @@ export class SetupComponent implements OnInit {
 
     this.playerList = this.gameData.players;
 
-    if (this.playerList.length == 0){
+    if (this.playerList.length == 0) {
       document.getElementById("createCardBtn").classList.add("hidden");
     }
-    if (this.playerList.length > 0){
+    if (this.playerList.length > 0) {
       document.getElementById("createCardBtn").classList.remove("hidden");
     }
   }
@@ -59,6 +62,5 @@ export class SetupComponent implements OnInit {
     let element = document.getElementById(`${player}`);
     element.parentNode.removeChild(element);
   }
-
 
 }

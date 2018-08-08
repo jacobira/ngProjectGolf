@@ -19,6 +19,20 @@
   align-items: center;
 }
 
+.card .cardDetails {
+  display: flex;
+  height: 75px;
+  width: 1200px;
+  margin-left: 92px;
+}
+
+.card .cardDetails .scoreBox {
+  border: solid 1px green;
+  height: 73px;
+  width: 48px;
+  font-size: 12px;
+}
+
 .card .cardContent {
   width: 900px;
 }

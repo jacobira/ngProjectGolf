@@ -14,6 +14,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
 import { NameFilterPipe } from './pipes/name-filter.pipe';
+import { CourseGetterService } from './services/course-getter.service';
 
 const appRoutes: Routes = [
   { path: 'setup', component: SetupComponent },
@@ -38,7 +39,9 @@ const appRoutes: Routes = [
   ],
   providers: [
     GameDataService,
-    FirebaseService
+    FirebaseService,
+    NameFilterPipe,
+    CourseGetterService
   ],
   bootstrap: [AppComponent]
 })
