@@ -9,7 +9,15 @@
   background-color: lightgray;
 }
 
-.setupPage .setupBox .setupBoxTop {
+.setupPage .setupBox .setupBoxTop #courseSelectionSection {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.setupPage .setupBox .setupBoxTop .playerInputSection {
   display: flex;
 }
 

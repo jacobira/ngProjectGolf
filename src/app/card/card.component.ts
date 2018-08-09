@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GameDataService } from '../services/game-data.service';
+import { CourseGetterService } from '../services/course-getter.service';
 
 @Component({
   selector: 'app-card',
@@ -8,15 +9,20 @@ import { GameDataService } from '../services/game-data.service';
 })
 export class CardComponent implements OnInit {
 
-  constructor( private gameData: GameDataService ) { }
+  constructor( private gameData: GameDataService, private courseGetter: CourseGetterService) { }
 
   ngOnInit() {
-
+    // this.getHolePars();
   }
 
   playerInfo: any[] = this.gameData.players;
+  holePars: number[] = [];
 
-
+  // getHolePars(){
+  //   for (let i = 0; i < this.courseGetter.selectedCourseDetails.data.holes.length; i ++){
+  //     this.holePars.push(this.courseGetter.selectedCourseDetails.data.holes[i]);
+  //   }
+  // }
 
   calcScores(){
     for (let i=0; i<this.playerInfo.length; i++){

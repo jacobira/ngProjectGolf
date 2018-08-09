@@ -2,8 +2,15 @@
 <div class="setupPage">
   <div class="setupBox">
     <div class="setupBoxTop">
-      <input class="playerInput" [(ngModel)]="playerEntered">
-      <button class="addPlayer" (click)="addPlayer()">Add Player</button>
+      <!--<div id="courseSelectionSection">-->
+        <!--<select id="courseSelect" *ngFor="let course of courseNames">-->
+          <!--<option (onclick)="setSelectedCourse(course)">{{course}}</option>-->
+        <!--</select>-->
+      <!--</div>-->
+      <div id="playerInputSection">
+        <input class="playerInput" [(ngModel)]="playerEntered">
+        <button class="addPlayer" (click)="addPlayer()">Add Player</button>
+      </div>
     </div>
     <div class="setupBoxBottom">
       <button class="createCard hidden" id="createCardBtn" routerLink="/card">Create Card</button>

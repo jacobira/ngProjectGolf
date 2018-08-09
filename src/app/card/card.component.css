@@ -1,6 +1,7 @@
 .card {
-  width: 1000px;
-  padding-top: 100px;
+  width: 1200px;
+  padding-top: 50px;
+
 }
 
 .card .cardInfo {
@@ -17,6 +18,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: lightgreen;
 }
 
 .card .cardDetails {
@@ -31,6 +33,7 @@
   height: 73px;
   width: 48px;
   font-size: 12px;
+  background-color: lightgreen;
 }
 
 .card .cardContent {
