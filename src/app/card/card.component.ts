@@ -12,17 +12,15 @@ export class CardComponent implements OnInit {
   constructor( private gameData: GameDataService, private courseGetter: CourseGetterService) { }
 
   ngOnInit() {
-    // this.getHolePars();
+    this.getHolePars();
   }
 
   playerInfo: any[] = this.gameData.players;
   holePars: number[] = [];
 
-  // getHolePars(){
-  //   for (let i = 0; i < this.courseGetter.selectedCourseDetails.data.holes.length; i ++){
-  //     this.holePars.push(this.courseGetter.selectedCourseDetails.data.holes[i]);
-  //   }
-  // }
+  getHolePars(){
+
+  }
 
   calcScores(){
     for (let i=0; i<this.playerInfo.length; i++){

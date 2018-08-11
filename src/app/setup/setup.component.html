@@ -3,8 +3,8 @@
   <div class="setupBox">
     <div class="setupBoxTop">
       <div id="courseSelectionSection">
-        <select id="courseSelect" *ngFor="let course of courseNames">
-          <option (onclick)="retrieveCourseDetails(course.id)">{{course.name}}</option>
+        <select id="courseSelect">
+          <option *ngFor="let course of courseNames" (onclick)="retrieveCourseDetails(course.id)">{{course.name}}</option>
         </select>
       </div>
       <div id="playerInputSection">

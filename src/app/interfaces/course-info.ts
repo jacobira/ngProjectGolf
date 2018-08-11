@@ -2,76 +2,76 @@ export interface CourseInfo {
   courseName: string,
   courseId: number,
   courseHoles: {
-    1: {
-      par: number,
+    hole1: {
+      parNum: number,
       ydg: number;
     },
-    2: {
-      par: number,
+    hole2: {
+      parNum: number,
       ydg: number;
     },
-    3: {
-      par: number,
+    hole3: {
+      parNum: number,
       ydg: number;
     },
-    4: {
-      par: number,
+    hole4: {
+      parNum: number,
       ydg: number;
     },
-    51: {
-      par: number,
+    hole5: {
+      parNum: number,
       ydg: number;
     },
-    6: {
-      par: number,
+    hole6: {
+      parNum: number,
       ydg: number;
     },
-    7: {
-      par: number,
+    hole7: {
+      parNum: number,
       ydg: number;
     },
-    8: {
-      par: number,
+    hole8: {
+      parNum: number,
       ydg: number;
     },
-    9: {
-      par: number,
+    hole9: {
+      parNum: number,
       ydg: number;
     },
-    10: {
-      par: number,
+    hole10: {
+      parNum: number,
       ydg: number;
     },
-    11: {
-      par: number,
+    hole11: {
+      parNum: number,
       ydg: number;
     },
-    12: {
-      par: number,
+    hole12: {
+      parNum: number,
       ydg: number;
     },
-    13: {
-      par: number,
+    hole13: {
+      parNum: number,
       ydg: number;
     },
-    14: {
-      par: number,
+    hole14: {
+      parNum: number,
       ydg: number;
     },
-    15: {
-      par: number,
+    hole15: {
+      parNum: number,
       ydg: number;
     },
-    16: {
-      par: number,
+    hole16: {
+      parNum: number,
       ydg: number;
     },
-    17: {
-      par: number,
+    hole17: {
+      parNum: number,
       ydg: number;
     },
-    18: {
-      par: number,
+    hole18: {
+      parNum: number,
       ydg: number;
     }
   }

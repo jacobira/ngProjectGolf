@@ -15,6 +15,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
 import { NameFilterPipe } from './pipes/name-filter.pipe';
 import { CourseGetterService } from './services/course-getter.service';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
   { path: 'setup', component: SetupComponent },
@@ -34,8 +35,10 @@ const appRoutes: Routes = [
     AngularFirestoreModule,
     AngularFireAuthModule,
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes),
     FormsModule
+
   ],
   providers: [
     GameDataService,

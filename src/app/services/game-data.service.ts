@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { CourseInfo } from '../interfaces/course-info';
-import {CourseGetterService} from './course-getter.service';
 
 @Injectable({
   providedIn: 'root'
@@ -8,11 +7,13 @@ import {CourseGetterService} from './course-getter.service';
 
 export class GameDataService {
 
-  constructor(private courseGetter: CourseGetterService) { }
+  constructor() { }
 
   players: any[] = [];
 
   thisCourse: CourseInfo;
+
+  generalInfo: any;
 
 
 }

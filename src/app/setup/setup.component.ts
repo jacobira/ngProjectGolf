@@ -19,21 +19,17 @@ export class SetupComponent implements OnInit {
 
   playerEntered: string = '';
   playerList: any[] = this.gameData.players;
-  courseNames: any[] = [];
+  courseNames: any[] = this.courseGetter.courseNames;
   currCourseDetails: any = {};
-  dataGeneral: any = {};
 
   retrieveCourses(){
     this.courseGetter.httpRequestGeneral();
-
-    for (let i = 0; i<this.dataGeneral.courses.length; i++){
-      this.courseNames.push(`{"name":${this.dataGeneral.courses[i].name}, "id":${this.dataGeneral.courses[i].id}`);
-    }
   }
 
   retrieveCourseDetails(id){
     this.courseGetter.httpRequestDetailed(id);
-    this.currCourseDetails = this.courseGetter.dataDetailed;
+    this.currCourseDetails = this.gameData.thisCourse;
+    console.log(this.currCourseDetails);
   }
 
   addPlayer() {
