@@ -10,36 +10,31 @@ import { CourseGetterService } from '../services/course-getter.service';
 })
 export class SetupComponent implements OnInit {
 
-  constructor(private gameData: GameDataService, private nameFilter: NameFilterPipe, private courseInfo: CourseGetterService) { }
+  constructor(private gameData: GameDataService, private nameFilter: NameFilterPipe, private courseGetter: CourseGetterService) { }
 
   ngOnInit() {
     this.checkForPlayers();
-    // this.getCourseNames();
+    this.retrieveCourses();
 }
 
   playerEntered: string = '';
   playerList: any[] = this.gameData.players;
-  // courseNames: string[] = [];
+  courseNames: any[] = [];
+  currCourseDetails: any = {};
+  dataGeneral: any = {};
 
-  // getCourseNames(){
-  //   for (let i = 0; i < this.courseInfo.courseGeneral.length; i++){
-  //     this.courseNames.push(this.courseInfo.courseGeneral[i].name);
-  //   }
-  // }
-  //
-  // setSelectedCourse(course){
-  //   this.courseInfo.selectedCourse = course;
-  //   this.getCourseId(course);
-  // }
-  //
-  // getCourseId(course){
-  //   this.courseInfo.selectedCourseId = this.courseInfo.courseGeneral.JSON.parse(course).id;
-  //   this.getCourseDetails(this.courseInfo.selectedCourseId);
-  // }
-  //
-  // getCourseDetails(id){
-  //   this.courseInfo.selectedCourseDetails = this.courseInfo.httpRequestDetailed(id);
-  // }
+  retrieveCourses(){
+    this.courseGetter.httpRequestGeneral();
+
+    for (let i = 0; i<this.dataGeneral.courses.length; i++){
+      this.courseNames.push(`{"name":${this.dataGeneral.courses[i].name}, "id":${this.dataGeneral.courses[i].id}`);
+    }
+  }
+
+  retrieveCourseDetails(id){
+    this.courseGetter.httpRequestDetailed(id);
+    this.currCourseDetails = this.courseGetter.dataDetailed;
+  }
 
   addPlayer() {
 

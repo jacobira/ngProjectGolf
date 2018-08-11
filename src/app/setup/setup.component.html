@@ -2,11 +2,11 @@
 <div class="setupPage">
   <div class="setupBox">
     <div class="setupBoxTop">
-      <!--<div id="courseSelectionSection">-->
-        <!--<select id="courseSelect" *ngFor="let course of courseNames">-->
-          <!--<option (onclick)="setSelectedCourse(course)">{{course}}</option>-->
-        <!--</select>-->
-      <!--</div>-->
+      <div id="courseSelectionSection">
+        <select id="courseSelect" *ngFor="let course of courseNames">
+          <option (onclick)="retrieveCourseDetails(course.id)">{{course.name}}</option>
+        </select>
+      </div>
       <div id="playerInputSection">
         <input class="playerInput" [(ngModel)]="playerEntered">
         <button class="addPlayer" (click)="addPlayer()">Add Player</button>
