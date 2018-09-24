@@ -1,27 +1,14 @@
-# NgProjectGolf
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+<h5>Simple Golf Scorecard</h5>
+<h3>An Angular Application</h3>
+    <p>
+        This app was developed as a demonstration of a basic application built with Angular.
+    </p>
+    <p>
+        After logging in with your Google account, players can be added to the game. The number of 
+        players determines the number of score rows generated in the card, and each row assigns itself 
+        to a player for whom to credit each score put down.
+    </p>
+    <p>
+        Totals, including in and out scores, are automatically calculated upon edit of any score in the card. 
+        To edit scores, simply click a scorebox and edit.
+    </p>
